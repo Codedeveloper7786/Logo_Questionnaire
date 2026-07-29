@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Logo Design Questionnaire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Syne:wght@700;800&display=swap" rel="stylesheet"/>
+
+<style>
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --dark:      #1A1A2E;
+  --accent:    #E94560;
+  --gold:      #F5A623;
+  --page-bg:   #F0F2F8;
+  --card-bg:   #FFFFFF;
+  --muted:     #6B7280;
+  --border:    #E5E7EB;
+  --answer-bg: #F1F5F9;
+  --slate:     #94A3B8;
+  --text:      #111827;
+  --radius:    10px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--page-bg);
+  color: var(--text);
+  min-height: 100vh;
+  padding: 0;
+}
+
+/* ── TOP BAR ── */
+.top-bar {
+  background: var(--dark);
+  height: 8px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.bottom-accent {
+  background: var(--accent);
+  height: 4px;
+  width: 100%;
+}
+
+/* ── WRAPPER ── */
+.wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+/* ── HERO ── */
+.hero {
+  text-align: center;
+  padding: 42px 32px 36px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  border-top: 4px solid var(--accent);
+  box-shadow: 0 4px 24px rgba(26,26,46,0.10);
+  margin-bottom: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -40px; right: -40px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(233,69,96,0.10) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -40px; left: -40px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245,166,35,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(233,69,96,0.10);
+  color: var(--accent);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(28px, 6vw, 46px);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--dark);
+  margin-bottom: 4px;
+}
+.hero h1 span { color: var(--accent); }
+.hero-sub {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: 18px;
+}
+.hero-divider {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+  border-radius: 2px;
+  margin: 0 auto 18px;
+}
+.hero-desc {
+  font-size: 13.5px;
+  color: var(--muted);
+  max-width: 520px;
+  margin: 0 auto 14px;
+  line-height: 1.7;
+}
+.hero-note {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 600;
+}
+.hero-note span { color: var(--muted); font-weight: 400; }
+
+/* ── SECTION HEADER ── */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--dark);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  margin-bottom: 18px;
+  position: relative;
+  overflow: hidden;
+}
+.section-header::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 5px;
+  background: var(--accent);
+  border-radius: var(--radius) 0 0 var(--radius);
+}
+.section-num {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.section-title-wrap { flex: 1; }
+.section-title {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+}
+.section-sub {
+  font-size: 11px;
+  color: var(--slate);
+  margin-top: 3px;
+}
+
+/* ── CARD ── */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  box-shadow: 0 2px 12px rgba(26,26,46,0.07);
+  margin-bottom: 28px;
+  border: 1px solid var(--border);
+}
+
+/* ── QUESTION BLOCK ── */
+.q-block { margin-bottom: 20px; }
+.q-block:last-child { margin-bottom: 0; }
+
+.q-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: flex-start;
+  gap: 4px;
+}
+.required { color: var(--accent); font-size: 13px; }
+
+.q-hint {
+  font-size: 11.5px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* ── TEXT INPUTS ── */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="url"],
+textarea {
+  width: 100%;
+  background: var(--answer-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  color: var(--dark);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  resize: vertical;
+}
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="url"]:focus,
+textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(233,69,96,0.10);
+  background: #fff;
+}
+textarea { min-height: 80px; }
+textarea.tall { min-height: 120px; }
+textarea.short { min-height: 54px; }
+
+/* ── TWO-COLUMN ROW ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 520px) { .two-col { grid-template-columns: 1fr; } }
+
+/* ── CHECKBOX GRID BOX ── */
+.checkbox-box {
+  background: var(--answer-bg);
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: grid;
+  gap: 10px;
+}
+.checkbox-box.cols-2 { grid-template-columns: 1fr 1fr; }
+.checkbox-box.cols-3 { grid-template-columns: 1fr 1fr 1fr; }
+@media (max-width: 600px) {
+  .checkbox-box.cols-3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 420px) {
+  .checkbox-box.cols-2,
+  .checkbox-box.cols-3 { grid-template-columns: 1fr; }
+}
+
+/* ── CUSTOM CHECKBOX ── */
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  cursor: pointer;
+  padding: 7px 10px;
+  border-radius: 7px;
+  transition: background 0.15s;
+  -webkit-user-select: none; user-select: none;
+}
+.check-item:hover { background: rgba(233,69,96,0.06); }
+
+.check-item input[type="checkbox"] { display: none; }
+
+.check-box {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  background: #fff;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border-color 0.15s;
+  position: relative;
+}
+
+.check-item input[type="checkbox"]:checked + .check-box {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+.check-item input[type="checkbox"]:checked + .check-box::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 9px;
+  border: 2px solid #fff;
+  border-top: none;
+  border-left: none;
+  transform: rotate(45deg) translateY(-1px);
+}
+
+.check-label {
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--dark);
+  line-height: 1.3;
+}
+.check-item:has(input:checked) .check-label { color: var(--accent); font-weight: 600; }
+
+/* ── DIVIDER ── */
+.q-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 18px 0;
+}
+
+/* ── CLIENT DETAILS BLOCK ── */
+.client-block {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 26px 28px;
+  box-shadow: 0 2px 12px rgba(26,26,46,0.07);
+  margin-bottom: 28px;
+  border: 1px solid var(--border);
+}
+.client-title {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--dark);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border);
+}
+
+/* ── THANK-YOU CARD ── */
+.thankyou-card {
+  background: var(--dark);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  text-align: center;
+  margin-bottom: 28px;
+}
+.thankyou-card h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.thankyou-card p {
+  font-size: 12.5px;
+  color: var(--slate);
+  line-height: 1.7;
+  max-width: 480px;
+  margin: 0 auto 20px;
+}
+
+/* ── SUBMIT BUTTON ── */
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--accent) 0%, #c73652 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 36px;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 16px rgba(233,69,96,0.35);
+}
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(233,69,96,0.45);
+}
+.submit-btn:active { transform: translateY(0); }
+.submit-btn svg { width: 16px; height: 16px; }
+
+/* ── PRINT BUTTON ── */
+.print-bar {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  box-shadow: 0 2px 8px rgba(26,26,46,0.05);
+}
+.print-bar p { font-size: 12.5px; color: var(--muted); }
+.print-btn {
+  background: var(--dark);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  padding: 9px 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex; align-items: center; gap: 6px;
+  transition: opacity 0.2s;
+}
+.print-btn:hover { opacity: 0.85; }
+
+/* ── SUCCESS MESSAGE ── */
+#success-msg {
+  display: none;
+  background: #ECFDF5;
+  border: 1.5px solid #10B981;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #065F46;
+  font-weight: 600;
+  font-size: 14px;
+}
+#error-msg {
+  display: none;
+  background: #FFF1F2;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 16px 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #9F1239;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+/* ── FOOTER ── */
+.page-footer {
+  text-align: center;
+  font-size: 11px;
+  color: var(--slate);
+  padding-bottom: 20px;
+}
+
+/* ── PRINT STYLES ── */
+@media print {
+  .print-bar, .submit-btn, .thankyou-card .submit-btn { display: none; }
+  body { background: #fff; }
+  .card, .client-block { box-shadow: none; border: 1px solid #ddd; }
+  .hero { box-shadow: none; }
+}
+</style>
+</head>
+
+<body>
+<div class="top-bar"></div>
+
+<div class="wrapper">
+
+  <!-- PRINT BAR -->
+  <div class="print-bar">
+    <p>📋 Fill out this form and submit it — or <strong>print</strong> for a physical copy</p>
+    <button class="print-btn" onclick="window.print()">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a1 1 0 001-1v-5H8v5a1 1 0 001 1z"/></svg>
+      Print / Save PDF
+    </button>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">★ Client Brief</div>
+    <h1><span>LOGO</span> DESIGN</h1>
+    <div class="hero-sub">Client Questionnaire</div>
+    <div class="hero-divider"></div>
+    <p class="hero-desc">
+      Help us craft the perfect logo for your brand — please answer every question
+      as completely as possible. The more detail you share, the better we can bring
+      your vision to life.
+    </p>
+    <p class="hero-note">
+      <span>Fields marked with </span>&nbsp;<span style="color:var(--accent);font-weight:700;">★</span>&nbsp;<span> are required</span>
+    </p>
+  </div>
+
+  <!-- SUCCESS MESSAGE -->
+  <div id="success-msg">
+    ✅ &nbsp;Thank you! Your questionnaire has been submitted. We'll review your answers and get back to you shortly.
+  </div>
+
+  <!-- ERROR MESSAGE -->
+  <div id="error-msg">
+    ⚠️ &nbsp;Something went wrong. Please check your connection and try again, or email us directly.
+  </div>
+
+  <form id="logo-form" novalidate>
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 1 — BUSINESS INFORMATION
+  ════════════════════════════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">1</div>
+    <div class="section-title-wrap">
+      <div class="section-title">Business Information</div>
+      <div class="section-sub">Tell us about your company</div>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="q-block">
+      <label class="q-label" for="q1">1.&nbsp; What is your business / brand name? <span class="required">*</span></label>
+      <input type="text" id="q1" name="business_name" placeholder="e.g. Nova Studio" required/>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q2">2.&nbsp; What is your tagline or slogan? <span style="color:var(--muted);font-weight:400;">(leave blank if none)</span></label>
+      <input type="text" id="q2" name="tagline" placeholder="e.g. Designing Tomorrow, Today"/>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q3">3.&nbsp; What industry or niche does your business belong to? <span class="required">*</span></label>
+      <input type="text" id="q3" name="industry" placeholder="e.g. Fashion, Tech, Food, Healthcare, Finance…" required/>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q4">4.&nbsp; Briefly describe what your business does / sells / offers: <span class="required">*</span></label>
+      <textarea id="q4" name="description" class="tall" placeholder="Tell us what you do, what makes you great, and who you serve…" required></textarea>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q5">5.&nbsp; Your website / social media links:</label>
+      <input type="url" id="q5" name="website" placeholder="https://yourwebsite.com or @yourhandle"/>
+    </div>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 2 — TARGET AUDIENCE
+  ════════════════════════════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">2</div>
+    <div class="section-title-wrap">
+      <div class="section-title">Target Audience</div>
+      <div class="section-sub">Who should the logo speak to?</div>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="q-block">
+      <label class="q-label" for="q6">6.&nbsp; Who is your primary target audience? <span class="required">*</span></label>
+      <p class="q-hint">e.g. young professionals, parents, teens, corporate clients…</p>
+      <textarea id="q6" name="audience" class="short" placeholder="Describe your ideal customer…" required></textarea>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <div class="q-label">7.&nbsp; Age range of your typical customer: <span class="required">*</span></div>
+      <div class="checkbox-box cols-3">
+        <label class="check-item"><input type="checkbox" name="age" value="Under 18"/><span class="check-box"></span><span class="check-label">Under 18</span></label>
+        <label class="check-item"><input type="checkbox" name="age" value="18–25"/><span class="check-box"></span><span class="check-label">18 – 25</span></label>
+        <label class="check-item"><input type="checkbox" name="age" value="26–35"/><span class="check-box"></span><span class="check-label">26 – 35</span></label>
+        <label class="check-item"><input type="checkbox" name="age" value="36–50"/><span class="check-box"></span><span class="check-label">36 – 50</span></label>
+        <label class="check-item"><input type="checkbox" name="age" value="50–65"/><span class="check-box"></span><span class="check-label">50 – 65</span></label>
+        <label class="check-item"><input type="checkbox" name="age" value="65+"/><span class="check-box"></span><span class="check-label">65+</span></label>
+      </div>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <div class="q-label">8.&nbsp; What gender does your audience lean towards? <span class="required">*</span></div>
+      <div class="checkbox-box cols-3">
+        <label class="check-item"><input type="checkbox" name="gender" value="Male"/><span class="check-box"></span><span class="check-label">Male</span></label>
+        <label class="check-item"><input type="checkbox" name="gender" value="Female"/><span class="check-box"></span><span class="check-label">Female</span></label>
+        <label class="check-item"><input type="checkbox" name="gender" value="All genders"/><span class="check-box"></span><span class="check-label">Non-binary / All genders</span></label>
+      </div>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q9">9.&nbsp; Describe your ideal customer in 3–5 words: <span class="required">*</span></label>
+      <input type="text" id="q9" name="customer_words" placeholder="e.g. ambitious, health-conscious, urban millennials" required/>
+    </div>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 3 — BRAND PERSONALITY
+  ════════════════════════════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">3</div>
+    <div class="section-title-wrap">
+      <div class="section-title">Brand Personality &amp; Feeling</div>
+      <div class="section-sub">What emotion should the logo evoke?</div>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="q-block">
+      <label class="q-label" for="q10">10.&nbsp; Describe your brand in 3 words: <span class="required">*</span></label>
+      <p class="q-hint">e.g. bold, playful, trustworthy, elegant, innovative…</p>
+      <input type="text" id="q10" name="brand_words" placeholder="Word 1, Word 2, Word 3" required/>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <div class="q-label">11.&nbsp; What feeling should someone get when they see your logo? <span class="required">*</span></div>
+      <div class="checkbox-box cols-2">
+        <label class="check-item"><input type="checkbox" name="feeling" value="Professional & Corporate"/><span class="check-box"></span><span class="check-label">Professional &amp; Corporate</span></label>
+        <label class="check-item"><input type="checkbox" name="feeling" value="Fun & Playful"/><span class="check-box"></span><span class="check-label">Fun &amp; Playful</span></label>
+        <label class="check-item"><input type="checkbox" name="feeling" value="Luxurious & Premium"/><span class="check-box"></span><span class="check-label">Luxurious &amp; Premium</span></label>
+        <label class="check-item"><input type="checkbox" name="feeling" value="Friendly & Approachable"/><span class="check-box"></span><span class="check-label">Friendly &amp; Approachable</span></label>
+        <label class="check-item"><input type="checkbox" name="feeling" value="Bold & Powerful"/><span class="check-box"></span><span class="check-label">Bold &amp; Powerful</span></label>
+        <label class="check-item"><input type="checkbox" name="feeling" value="Calm & Trustworthy"/><span class="check-box"></span><span class="check-label">Calm &amp; Trustworthy</span></label>
+        <label class="check-item"><input type="checkbox" name="feeling" value="Creative & Artistic"/><span class="check-box"></span><span class="check-label">Creative &amp; Artistic</span></label>
+        <label class="check-item"><input type="checkbox" name="feeling" value="Innovative & Tech"/><span class="check-box"></span><span class="check-label">Innovative &amp; Tech</span></label>
+        <label class="check-item"><input type="checkbox" name="feeling" value="Natural & Eco-friendly"/><span class="check-box"></span><span class="check-label">Natural &amp; Eco-friendly</span></label>
+        <label class="check-item"><input type="checkbox" name="feeling" value="Other"/><span class="check-box"></span><span class="check-label">Other (describe below)</span></label>
+      </div>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q12">12.&nbsp; What makes your business different from competitors? <span class="required">*</span></label>
+      <textarea id="q12" name="differentiator" class="short" placeholder="Your unique selling proposition, what sets you apart…" required></textarea>
+    </div>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 4 — LOGO STYLE
+  ════════════════════════════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">4</div>
+    <div class="section-title-wrap">
+      <div class="section-title">Logo Style Preferences</div>
+      <div class="section-sub">Shape your visual identity</div>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="q-block">
+      <div class="q-label">13.&nbsp; What type of logo do you prefer? <span class="required">*</span></div>
+      <div class="checkbox-box cols-2">
+        <label class="check-item"><input type="checkbox" name="logo_type" value="Wordmark"/><span class="check-box"></span><span class="check-label">Wordmark (company name only)</span></label>
+        <label class="check-item"><input type="checkbox" name="logo_type" value="Lettermark"/><span class="check-box"></span><span class="check-label">Lettermark (initials / monogram)</span></label>
+        <label class="check-item"><input type="checkbox" name="logo_type" value="Icon only"/><span class="check-box"></span><span class="check-label">Icon / Symbol only</span></label>
+        <label class="check-item"><input type="checkbox" name="logo_type" value="Combination"/><span class="check-box"></span><span class="check-label">Combination (icon + text)</span></label>
+        <label class="check-item"><input type="checkbox" name="logo_type" value="Emblem"/><span class="check-box"></span><span class="check-label">Emblem / Badge style</span></label>
+        <label class="check-item"><input type="checkbox" name="logo_type" value="No preference"/><span class="check-box"></span><span class="check-label">No preference</span></label>
+      </div>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <div class="q-label">14.&nbsp; Which design style appeals to you most? <span class="required">*</span></div>
+      <div class="checkbox-box cols-2">
+        <label class="check-item"><input type="checkbox" name="design_style" value="Minimalist"/><span class="check-box"></span><span class="check-label">Minimalist / Clean</span></label>
+        <label class="check-item"><input type="checkbox" name="design_style" value="Modern & Flat"/><span class="check-box"></span><span class="check-label">Modern &amp; Flat</span></label>
+        <label class="check-item"><input type="checkbox" name="design_style" value="Classic / Timeless"/><span class="check-box"></span><span class="check-label">Classic / Timeless</span></label>
+        <label class="check-item"><input type="checkbox" name="design_style" value="Geometric"/><span class="check-box"></span><span class="check-label">Geometric / Abstract</span></label>
+        <label class="check-item"><input type="checkbox" name="design_style" value="Vintage / Retro"/><span class="check-box"></span><span class="check-label">Vintage / Retro</span></label>
+        <label class="check-item"><input type="checkbox" name="design_style" value="Hand-drawn"/><span class="check-box"></span><span class="check-label">Hand-drawn / Organic</span></label>
+        <label class="check-item"><input type="checkbox" name="design_style" value="3D / Dimensional"/><span class="check-box"></span><span class="check-label">3D / Dimensional</span></label>
+        <label class="check-item"><input type="checkbox" name="design_style" value="Futuristic / Tech"/><span class="check-box"></span><span class="check-label">Futuristic / Tech</span></label>
+      </div>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q15">15.&nbsp; Share links or names of logos / brands you LOVE (and why): <span class="required">*</span></label>
+      <p class="q-hint">This helps us understand your taste — the more the better!</p>
+      <textarea id="q15" name="logos_love" class="tall" placeholder="e.g. Apple — love the simplicity. Nike — powerful and minimal. Airbnb — the belonging symbol is clever…" required></textarea>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q16">16.&nbsp; Share links or names of logos / brands you DISLIKE (and why):</label>
+      <textarea id="q16" name="logos_dislike" class="short" placeholder="e.g. Too complex, too old-fashioned, clashing colors…"></textarea>
+    </div>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 5 — COLORS
+  ════════════════════════════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">5</div>
+    <div class="section-title-wrap">
+      <div class="section-title">Colors &amp; Visual Elements</div>
+      <div class="section-sub">Define your palette</div>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="q-block">
+      <div class="q-label">17.&nbsp; Do you already have brand colors? <span class="required">*</span></div>
+      <div class="checkbox-box cols-3">
+        <label class="check-item"><input type="checkbox" name="has_colors" value="Yes"/><span class="check-box"></span><span class="check-label">Yes</span></label>
+        <label class="check-item"><input type="checkbox" name="has_colors" value="No"/><span class="check-box"></span><span class="check-label">No</span></label>
+        <label class="check-item"><input type="checkbox" name="has_colors" value="Not sure"/><span class="check-box"></span><span class="check-label">Not sure yet</span></label>
+      </div>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q18">18.&nbsp; If yes, list your brand colors (hex codes, names, or Pantone):</label>
+      <input type="text" id="q18" name="brand_colors" placeholder="e.g. #1A1A2E, Navy Blue, Pantone 2768 C"/>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <div class="q-label">19.&nbsp; Preferred color palette / colors you like: <span class="required">*</span></div>
+      <div class="checkbox-box cols-3">
+        <label class="check-item"><input type="checkbox" name="color_pref" value="Black & White"/><span class="check-box"></span><span class="check-label">Black &amp; White</span></label>
+        <label class="check-item"><input type="checkbox" name="color_pref" value="Blues & Navy"/><span class="check-box"></span><span class="check-label">Blues &amp; Navy</span></label>
+        <label class="check-item"><input type="checkbox" name="color_pref" value="Greens & Earthy"/><span class="check-box"></span><span class="check-label">Greens &amp; Earthy tones</span></label>
+        <label class="check-item"><input type="checkbox" name="color_pref" value="Reds & Oranges"/><span class="check-box"></span><span class="check-label">Reds &amp; Oranges</span></label>
+        <label class="check-item"><input type="checkbox" name="color_pref" value="Purples & Violets"/><span class="check-box"></span><span class="check-label">Purples &amp; Violets</span></label>
+        <label class="check-item"><input type="checkbox" name="color_pref" value="Yellows & Golds"/><span class="check-box"></span><span class="check-label">Yellows &amp; Golds</span></label>
+        <label class="check-item"><input type="checkbox" name="color_pref" value="Pinks & Rose"/><span class="check-box"></span><span class="check-label">Pinks &amp; Rose</span></label>
+        <label class="check-item"><input type="checkbox" name="color_pref" value="Pastels"/><span class="check-box"></span><span class="check-label">Pastels / Soft tones</span></label>
+        <label class="check-item"><input type="checkbox" name="color_pref" value="Bold Neons"/><span class="check-box"></span><span class="check-label">Bold / Vibrant neons</span></label>
+      </div>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q20">20.&nbsp; Colors you want to AVOID and why: <span class="required">*</span></label>
+      <input type="text" id="q20" name="colors_avoid" placeholder="e.g. Yellow — looks cheap to us; Red — conflicts with competitor" required/>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q21">21.&nbsp; Any specific symbols, icons, or imagery to INCLUDE?</label>
+      <p class="q-hint">e.g. a leaf, a crown, an abstract shape, initials…</p>
+      <textarea id="q21" name="include_symbols" class="short" placeholder="Describe any elements you'd like to see in the logo…"></textarea>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q22">22.&nbsp; Any symbols or imagery to AVOID?</label>
+      <input type="text" id="q22" name="avoid_symbols" placeholder="e.g. no animals, no globes, no clichéd lightbulbs…"/>
+    </div>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 6 — TYPOGRAPHY
+  ════════════════════════════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">6</div>
+    <div class="section-title-wrap">
+      <div class="section-title">Typography</div>
+      <div class="section-sub">Choose your font personality</div>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="q-block">
+      <div class="q-label">23.&nbsp; Preferred font / typography style: <span class="required">*</span></div>
+      <div class="checkbox-box cols-2">
+        <label class="check-item"><input type="checkbox" name="font_style" value="Serif"/><span class="check-box"></span><span class="check-label">Serif (traditional, elegant)</span></label>
+        <label class="check-item"><input type="checkbox" name="font_style" value="Sans-serif"/><span class="check-box"></span><span class="check-label">Sans-serif (clean, modern)</span></label>
+        <label class="check-item"><input type="checkbox" name="font_style" value="Script"/><span class="check-box"></span><span class="check-label">Script / Handwritten</span></label>
+        <label class="check-item"><input type="checkbox" name="font_style" value="Display"/><span class="check-box"></span><span class="check-label">Display / Decorative</span></label>
+        <label class="check-item"><input type="checkbox" name="font_style" value="Bold / Heavy"/><span class="check-box"></span><span class="check-label">Bold / Heavy weight</span></label>
+        <label class="check-item"><input type="checkbox" name="font_style" value="Thin / Light"/><span class="check-box"></span><span class="check-label">Thin / Light weight</span></label>
+        <label class="check-item"><input type="checkbox" name="font_style" value="All caps"/><span class="check-box"></span><span class="check-label">All caps</span></label>
+        <label class="check-item"><input type="checkbox" name="font_style" value="No preference"/><span class="check-box"></span><span class="check-label">No preference</span></label>
+      </div>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q24">24.&nbsp; Do you have a specific font you already love?</label>
+      <p class="q-hint">e.g. Futura, Garamond, Proxima Nova, Helvetica…</p>
+      <input type="text" id="q24" name="favorite_font" placeholder="Font name(s)"/>
+    </div>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 7 — USAGE & DELIVERABLES
+  ════════════════════════════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">7</div>
+    <div class="section-title-wrap">
+      <div class="section-title">Usage &amp; Deliverables</div>
+      <div class="section-sub">Where will the logo live?</div>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="q-block">
+      <div class="q-label">25.&nbsp; Where will the logo primarily be used? <span class="required">*</span></div>
+      <p class="q-hint">Select all that apply</p>
+      <div class="checkbox-box cols-3">
+        <label class="check-item"><input type="checkbox" name="usage" value="Website / App"/><span class="check-box"></span><span class="check-label">Website / App</span></label>
+        <label class="check-item"><input type="checkbox" name="usage" value="Social Media"/><span class="check-box"></span><span class="check-label">Social Media</span></label>
+        <label class="check-item"><input type="checkbox" name="usage" value="Print"/><span class="check-box"></span><span class="check-label">Print (brochures, flyers)</span></label>
+        <label class="check-item"><input type="checkbox" name="usage" value="Business Cards"/><span class="check-box"></span><span class="check-label">Business Cards</span></label>
+        <label class="check-item"><input type="checkbox" name="usage" value="Signage"/><span class="check-box"></span><span class="check-label">Signage / Banners</span></label>
+        <label class="check-item"><input type="checkbox" name="usage" value="Packaging"/><span class="check-box"></span><span class="check-label">Packaging / Labels</span></label>
+        <label class="check-item"><input type="checkbox" name="usage" value="Merchandise"/><span class="check-box"></span><span class="check-label">Merchandise / Apparel</span></label>
+        <label class="check-item"><input type="checkbox" name="usage" value="TV / Video"/><span class="check-box"></span><span class="check-label">TV / Video</span></label>
+        <label class="check-item"><input type="checkbox" name="usage" value="Email"/><span class="check-box"></span><span class="check-label">Email / Newsletter</span></label>
+      </div>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <div class="q-label">26.&nbsp; File formats you need:</div>
+      <div class="checkbox-box cols-3">
+        <label class="check-item"><input type="checkbox" name="formats" value="SVG"/><span class="check-box"></span><span class="check-label">SVG (vector)</span></label>
+        <label class="check-item"><input type="checkbox" name="formats" value="PNG"/><span class="check-box"></span><span class="check-label">PNG (transparent)</span></label>
+        <label class="check-item"><input type="checkbox" name="formats" value="PDF"/><span class="check-box"></span><span class="check-label">PDF (print)</span></label>
+        <label class="check-item"><input type="checkbox" name="formats" value="JPG"/><span class="check-box"></span><span class="check-label">JPG</span></label>
+        <label class="check-item"><input type="checkbox" name="formats" value="EPS"/><span class="check-box"></span><span class="check-label">EPS</span></label>
+        <label class="check-item"><input type="checkbox" name="formats" value="Recommend"/><span class="check-box"></span><span class="check-label">Not sure — recommend for me</span></label>
+      </div>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <div class="q-label">27.&nbsp; Do you need logo variations?</div>
+      <div class="checkbox-box cols-3">
+        <label class="check-item"><input type="checkbox" name="variations" value="Full-color"/><span class="check-box"></span><span class="check-label">Full-color version</span></label>
+        <label class="check-item"><input type="checkbox" name="variations" value="Black & White"/><span class="check-box"></span><span class="check-label">Black &amp; White version</span></label>
+        <label class="check-item"><input type="checkbox" name="variations" value="Horizontal"/><span class="check-box"></span><span class="check-label">Horizontal layout</span></label>
+        <label class="check-item"><input type="checkbox" name="variations" value="Stacked"/><span class="check-box"></span><span class="check-label">Stacked layout</span></label>
+        <label class="check-item"><input type="checkbox" name="variations" value="Icon only"/><span class="check-box"></span><span class="check-label">Icon only (favicon)</span></label>
+        <label class="check-item"><input type="checkbox" name="variations" value="Not sure"/><span class="check-box"></span><span class="check-label">Not sure</span></label>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 8 — COMPETITION
+  ════════════════════════════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">8</div>
+    <div class="section-title-wrap">
+      <div class="section-title">Competition</div>
+      <div class="section-sub">Know your market</div>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="q-block">
+      <label class="q-label" for="q28">28.&nbsp; Name 2–3 of your main competitors: <span class="required">*</span></label>
+      <textarea id="q28" name="competitors" class="short" placeholder="e.g. BrandA, BrandB, BrandC" required></textarea>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <label class="q-label" for="q29">29.&nbsp; How do you want your logo to stand out from competitors? <span class="required">*</span></label>
+      <textarea id="q29" name="stand_out" class="short" placeholder="e.g. Be more modern, use bolder colors, feel more approachable…" required></textarea>
+    </div>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 9 — TIMELINE & BUDGET
+  ════════════════════════════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">9</div>
+    <div class="section-title-wrap">
+      <div class="section-title">Timeline &amp; Budget</div>
+      <div class="section-sub">Let's plan together</div>
+    </div>
+  </div>
+
+  <div class="card">
+
+    <div class="q-block">
+      <label class="q-label" for="q30">30.&nbsp; What is your desired deadline / delivery date? <span class="required">*</span></label>
+      <input type="date" id="q30" name="deadline" required/>
+    </div>
+
+    <hr class="q-divider"/>
+
+    <div class="q-block">
+      <div class="q-label">31.&nbsp; What is your budget range for this project? <span class="required">*</span></div>
+      <div class="checkbox-box cols-3">
+        <label class="check-item"><input type="checkbox" name="budget" value="Under $100"/><span class="check-box"></span><span class="check-label">Under $100</span></label>
+        <label class="check-item"><input type="checkbox" name="budget" value="$100–$300"/><span class="check-box"></span><span class="check-label">$100 – $300</span></label>
+        <label class="check-item"><input type="checkbox" name="budget" value="$300–$600"/><span class="check-box"></span><span class="check-label">$300 – $600</span></label>
+        <label class="check-item"><input type="checkbox" name="budget" value="$600–$1,000"/><span class="check-box"></span><span class="check-label">$600 – $1,000</span></label>
+        <label class="check-item"><input type="checkbox" name="budget" value="$1,000–$2,500"/><span class="check-box"></span><span class="check-label">$1,000 – $2,500</span></label>
+        <label class="check-item"><input type="checkbox" name="budget" value="$2,500+"/><span class="check-box"></span><span class="check-label">$2,500+</span></label>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       SECTION 10 — ANYTHING ELSE
+  ════════════════════════════════════════════════════ -->
+  <div class="section-header">
+    <div class="section-num">10</div>
+    <div class="section-title-wrap">
+      <div class="section-title">Anything Else?</div>
+      <div class="section-sub">Your space to speak freely</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="q-block">
+      <label class="q-label" for="q32">32.&nbsp; Any additional notes, ideas, or details you want us to know?</label>
+      <p class="q-hint">The more context, the better! Paste mood board links, describe a dream logo, share a story…</p>
+      <textarea id="q32" name="notes" style="min-height:150px;" placeholder="Share anything and everything — reference images, Pinterest links, a description of your dream logo, the story behind your brand…"></textarea>
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════════════
+       CLIENT DETAILS
+  ════════════════════════════════════════════════════ -->
+  <div class="client-block">
+    <div class="client-title">Client Details</div>
+    <div class="two-col" style="margin-bottom:14px;">
+      <div class="q-block" style="margin:0;">
+        <label class="q-label" for="cd-name">Full Name <span class="required">*</span></label>
+        <input type="text" id="cd-name" name="client_name" placeholder="Your full name" required/>
+      </div>
+      <div class="q-block" style="margin:0;">
+        <label class="q-label" for="cd-email">Email Address <span class="required">*</span></label>
+        <input type="email" id="cd-email" name="client_email" placeholder="you@email.com" required/>
+      </div>
+    </div>
+    <div class="two-col">
+      <div class="q-block" style="margin:0;">
+        <label class="q-label" for="cd-phone">Phone / WhatsApp</label>
+        <input type="tel" id="cd-phone" name="client_phone" placeholder="+1 (000) 000-0000"/>
+      </div>
+      <div class="q-block" style="margin:0;">
+        <label class="q-label" for="cd-date">Date Submitted</label>
+        <input type="date" id="cd-date" name="submit_date"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- THANK YOU + SUBMIT -->
+  <div class="thankyou-card">
+    <h3>Thank you for taking the time to fill this out!</h3>
+    <p>
+      We'll review your answers and get back to you shortly with a proposal.
+      If you have any questions in the meantime, feel free to reach out.
+    </p>
+    <button type="submit" class="submit-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
+      </svg>
+      Submit Questionnaire
+    </button>
+  </div>
+
+  </form><!-- end form -->
+
+  <div class="page-footer">
+    Logo Design Questionnaire &nbsp;·&nbsp; Please fill all fields clearly &nbsp;·&nbsp; Confidential
+  </div>
+
+</div><!-- end wrapper -->
+
+<div class="bottom-accent"></div>
+
+<script>
+  // Formspree endpoint — submissions go straight to your inbox
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mnjerqeq';
+
+  // Auto-fill today's date
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('cd-date').value = today;
+
+  const form    = document.getElementById('logo-form');
+  const btn     = form.querySelector('.submit-btn');
+  const successEl = document.getElementById('success-msg');
+  const errorEl   = document.getElementById('error-msg');
+
+  // ── Collect checked checkbox values into readable text ────────────
+  function collectCheckboxes(name) {
+    const checked = form.querySelectorAll(`input[name="${name}"]:checked`);
+    return Array.from(checked).map(cb => cb.value).join(', ') || '—';
+  }
+
+  // ── Validate required text/textarea/date inputs ───────────────────
+  function validate() {
+    const required = form.querySelectorAll('[required]');
+    let allGood = true;
+    let firstBad = null;
+
+    required.forEach(el => {
+      const ok = el.value.trim() !== '';
+      el.style.borderColor  = ok ? '#10B981' : 'var(--accent)';
+      el.style.boxShadow    = ok
+        ? '0 0 0 3px rgba(16,185,129,0.12)'
+        : '0 0 0 3px rgba(233,69,96,0.15)';
+      if (!ok) { allGood = false; if (!firstBad) firstBad = el; }
+    });
+
+    if (firstBad) firstBad.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    return allGood;
+  }
+
+  // ── Submit handler ────────────────────────────────────────────────
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    errorEl.style.display   = 'none';
+    successEl.style.display = 'none';
+
+    if (!validate()) return;
+
+    // Build a clean data payload — readable field labels in the email
+    const data = {
+      // ── Section 1
+      'Business Name':        form.business_name.value,
+      'Tagline / Slogan':     form.tagline.value       || '—',
+      'Industry':             form.industry.value,
+      'Description':          form.description.value,
+      'Website / Social':     form.website.value       || '—',
+      // ── Section 2
+      'Target Audience':      form.audience.value,
+      'Age Range':            collectCheckboxes('age'),
+      'Gender':               collectCheckboxes('gender'),
+      'Ideal Customer (words)': form.customer_words.value,
+      // ── Section 3
+      'Brand in 3 Words':     form.brand_words.value,
+      'Logo Feeling':         collectCheckboxes('feeling'),
+      'Differentiator':       form.differentiator.value,
+      // ── Section 4
+      'Logo Type':            collectCheckboxes('logo_type'),
+      'Design Style':         collectCheckboxes('design_style'),
+      'Logos They LOVE':      form.logos_love.value,
+      'Logos They DISLIKE':   form.logos_dislike.value || '—',
+      // ── Section 5
+      'Has Brand Colors':     collectCheckboxes('has_colors'),
+      'Brand Colors':         form.brand_colors.value  || '—',
+      'Color Preferences':    collectCheckboxes('color_pref'),
+      'Colors to AVOID':      form.colors_avoid.value,
+      'Symbols to Include':   form.include_symbols.value || '—',
+      'Symbols to Avoid':     form.avoid_symbols.value   || '—',
+      // ── Section 6
+      'Font Style':           collectCheckboxes('font_style'),
+      'Favourite Font':       form.favorite_font.value   || '—',
+      // ── Section 7
+      'Logo Usage':           collectCheckboxes('usage'),
+      'File Formats':         collectCheckboxes('formats'),
+      'Logo Variations':      collectCheckboxes('variations'),
+      // ── Section 8
+      'Competitors':          form.competitors.value,
+      'Stand Out From Competitors': form.stand_out.value,
+      // ── Section 9
+      'Deadline':             form.deadline.value,
+      'Budget':               collectCheckboxes('budget'),
+      // ── Section 10
+      'Additional Notes':     form.notes.value           || '—',
+      // ── Client
+      'Client Name':          form.client_name.value,
+      'Client Email':         form.client_email.value,
+      'Client Phone':         form.client_phone.value    || '—',
+      'Date Submitted':       form.submit_date.value,
+      // Formspree config — reply directly to client
+      '_replyto':             form.client_email.value,
+      '_subject':             `New Logo Brief: ${form.business_name.value}`,
+    };
+
+    // Show loading state
+    btn.disabled    = true;
+    btn.innerHTML   = '<svg xmlns="http://www.w3.org/2000/svg" class="spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px;animation:spin .8s linear infinite"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> &nbsp;Sending…';
+
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method:  'POST',
+        headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+        body:    JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        // ── SUCCESS ──────────────────────────────────────────────────
+        form.style.display      = 'none';
+        successEl.style.display = 'block';
+        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        // ── SERVER ERROR ─────────────────────────────────────────────
+        const json = await response.json().catch(() => ({}));
+        throw new Error(json.error || `Server error ${response.status}`);
+      }
+
+    } catch (err) {
+      // ── NETWORK / CONFIG ERROR ────────────────────────────────────
+      errorEl.style.display = 'block';
+      errorEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      btn.disabled  = false;
+      btn.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5" style="width:16px;height:16px"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg> Submit Questionnaire`;
+    }
+  });
+</script>
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
+
+</body>
+</html>
