@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Mirza Logo Designing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #0F172A;
+      --navy-mid:   #1E293B;
+      --gold:       #C9A84C;
+      --gold-soft:  rgba(201,168,76,0.10);
+      --gold-bdr:   rgba(201,168,76,0.28);
+      --off-white:  #F8F7F4;
+      --white:      #FFFFFF;
+      --text:       #1E293B;
+      --text-sec:   #475569;
+      --text-muted: #94A3B8;
+      --border:     #E2E8F0;
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      background: var(--off-white);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+      padding: 60px 48px 52px;
+    }
+
+    header::before {
+      content: 'M';
+      position: absolute;
+      right: -12px;
+      top: -60px;
+      font-family: 'DM Serif Display', serif;
+      font-size: 340px;
+      color: rgba(255,255,255,0.04);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .header-inner { max-width: 1100px; margin: 0 auto; position: relative; z-index: 1; }
+
+    .brand { display: flex; align-items: center; gap: 14px; margin-bottom: 40px; }
+
+    .brand-mark {
+      width: 46px; height: 46px;
+      background: var(--gold);
+      border-radius: 11px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'DM Serif Display', serif;
+      font-size: 25px; color: var(--navy); flex-shrink: 0;
+    }
+
+    .brand-name  { font-size: 18px; font-weight: 600; color: #fff; letter-spacing: 0.02em; }
+    .brand-tag   { font-size: 11px; color: var(--text-muted); letter-spacing: 0.07em; text-transform: uppercase; margin-top: 2px; }
+
+    h1.page-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(34px, 5vw, 54px);
+      color: #fff; line-height: 1.15; margin-bottom: 22px;
+    }
+
+    .header-meta { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+
+    .badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: var(--gold-soft); border: 1px solid var(--gold-bdr);
+      color: var(--gold); font-size: 12px; font-weight: 500;
+      letter-spacing: 0.04em; padding: 6px 14px; border-radius: 100px;
+    }
+    .badge-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+
+    .header-desc { font-size: 15px; color: var(--text-muted); max-width: 540px; line-height: 1.75; }
+
+    /* ── LAYOUT ── */
+    .layout {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 252px 1fr;
+      padding: 52px 48px 88px;
+      align-items: start;
+    }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 36px; padding-right: 44px; }
+
+    .sidebar-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 18px;
+    }
+
+    .nav-list { list-style: none; }
+
+    .nav-link {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 0 8px 14px; margin-left: -14px;
+      font-size: 13.5px; color: var(--text-sec); text-decoration: none;
+      border-left: 2px solid transparent;
+      transition: color 0.18s, border-color 0.18s;
+    }
+    .nav-link:hover { color: var(--navy); }
+    .nav-link.active { color: var(--gold); border-left-color: var(--gold); font-weight: 500; }
+
+    .nav-num { font-size: 10px; font-weight: 500; color: var(--text-muted); min-width: 20px; }
+    .nav-link.active .nav-num { color: var(--gold); }
+
+    /* ── CONTENT ── */
+    .content { min-width: 0; }
+
+    .section { margin-bottom: 58px; padding-bottom: 58px; border-bottom: 1px solid var(--border); }
+    .section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .section-header { display: flex; align-items: baseline; gap: 16px; margin-bottom: 26px; }
+
+    .section-num {
+      font-size: 11px; font-weight: 500; color: var(--gold);
+      letter-spacing: 0.08em; text-transform: uppercase; min-width: 32px;
+    }
+
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 27px; color: var(--navy); line-height: 1.2;
+    }
+
+    .section p { font-size: 15px; color: var(--text-sec); line-height: 1.88; margin-bottom: 16px; }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── DATA GRID ── */
+    .data-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 22px 0; }
+
+    .data-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 11px; padding: 18px 20px;
+    }
+    .data-card-icon { font-size: 20px; margin-bottom: 10px; }
+    .data-card-title { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 5px; }
+    .data-card-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.65; }
+
+    /* ── POLICY LIST ── */
+    .policy-list { list-style: none; margin: 18px 0; }
+
+    .policy-list li {
+      display: flex; align-items: flex-start; gap: 11px;
+      font-size: 15px; color: var(--text-sec); line-height: 1.78; padding: 6px 0;
+    }
+    .policy-list li::before {
+      content: '';
+      width: 6px; height: 6px; background: var(--gold);
+      border-radius: 50%; margin-top: 9px; flex-shrink: 0;
+    }
+    .policy-list strong { color: var(--navy); font-weight: 600; }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: var(--gold-soft);
+      border: 1px solid var(--gold-bdr);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 9px 9px 0;
+      padding: 16px 20px; margin: 22px 0;
+    }
+    .highlight-box p { font-size: 14px !important; color: var(--navy) !important; margin-bottom: 0 !important; }
+
+    /* ── CONTACT CARD ── */
+    .contact-card { background: var(--navy); border-radius: 14px; padding: 30px 34px; margin-top: 26px; }
+
+    .contact-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 22px; color: #fff; margin-bottom: 22px;
+    }
+
+    .contact-row { display: flex; align-items: center; gap: 14px; margin-bottom: 16px; }
+    .contact-row:last-child { margin-bottom: 0; }
+
+    .contact-icon {
+      width: 34px; height: 34px;
+      background: rgba(201,168,76,0.14);
+      border-radius: 9px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; flex-shrink: 0;
+    }
+
+    .contact-label { font-size: 10px; color: var(--text-muted); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 2px; }
+    .contact-value { font-size: 14px; color: #fff; font-weight: 500; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--navy); padding: 26px 48px; }
+
+    .footer-inner {
+      max-width: 1100px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+
+    .footer-text  { font-size: 13px; color: var(--text-muted); }
+    .footer-brand { font-size: 13px; color: var(--gold); font-weight: 500; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 780px) {
+      header  { padding: 36px 24px 32px; }
+      header::before { font-size: 180px; right: -10px; top: -30px; }
+
+      .layout { grid-template-columns: 1fr; padding: 30px 24px 60px; }
+
+      .sidebar { position: static; padding-right: 0; margin-bottom: 30px; }
+
+      .nav-list { display: flex; overflow-x: auto; gap: 6px; padding-bottom: 6px; }
+
+      .nav-link {
+        white-space: nowrap; border-left: none; padding: 6px 12px; margin-left: 0;
+        border-radius: 100px;
+        background: var(--white); border: 1px solid var(--border) !important;
+      }
+      .nav-link.active { background: var(--gold-soft); border-color: var(--gold-bdr) !important; }
+
+      .data-grid { grid-template-columns: 1fr; }
+
+      footer { padding: 22px 24px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-mark">M</div>
+        <div>
+          <div class="brand-name">Mirza Logo Designing</div>
+          <div class="brand-tag">Creative Studio</div>
+        </div>
+      </div>
+      <h1 class="page-title">Privacy Policy</h1>
+      <div class="header-meta">
+        <span class="badge"><span class="badge-dot"></span>Last Updated: August 2, 2026</span>
+        <p class="header-desc">We are committed to protecting your personal information and your right to privacy. This policy explains how we handle your data.</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="sidebar-label">Contents</div>
+      <ul class="nav-list" id="nav">
+        <li><a href="#intro"     class="nav-link active"><span class="nav-num">01</span>Introduction</a></li>
+        <li><a href="#collect"   class="nav-link"><span class="nav-num">02</span>Information We Collect</a></li>
+        <li><a href="#use"       class="nav-link"><span class="nav-num">03</span>How We Use It</a></li>
+        <li><a href="#share"     class="nav-link"><span class="nav-num">04</span>Sharing Information</a></li>
+        <li><a href="#retention" class="nav-link"><span class="nav-num">05</span>Data Retention</a></li>
+        <li><a href="#rights"    class="nav-link"><span class="nav-num">06</span>Your Rights</a></li>
+        <li><a href="#security"  class="nav-link"><span class="nav-num">07</span>Security</a></li>
+        <li><a href="#children"  class="nav-link"><span class="nav-num">08</span>Children's Privacy</a></li>
+        <li><a href="#changes"   class="nav-link"><span class="nav-num">09</span>Policy Updates</a></li>
+        <li><a href="#contact"   class="nav-link"><span class="nav-num">10</span>Contact Us</a></li>
+      </ul>
+    </aside>
+
+    <main class="content">
+
+      <!-- 01 INTRODUCTION -->
+      <section class="section" id="intro">
+        <div class="section-header">
+          <span class="section-num">01</span>
+          <h2 class="section-title">Introduction</h2>
+        </div>
+        <p>Welcome to Mirza Logo Designing ("we," "us," or "our"). We are a creative studio specialising in professional logo design and brand identity services for businesses and individuals worldwide.</p>
+        <p>This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website, contact us for services, or engage with our design process. Please read this policy carefully. If you disagree with its terms, please discontinue use of our services.</p>
+        <div class="highlight-box">
+          <p>By using our services or website, you consent to the data practices described in this Privacy Policy. This policy applies to all clients, visitors, and individuals who interact with Mirza Logo Designing.</p>
+        </div>
+      </section>
+
+      <!-- 02 INFORMATION WE COLLECT -->
+      <section class="section" id="collect">
+        <div class="section-header">
+          <span class="section-num">02</span>
+          <h2 class="section-title">Information We Collect</h2>
+        </div>
+        <p>We collect information necessary to deliver our logo design and branding services effectively. The types of information we may gather include:</p>
+        <div class="data-grid">
+          <div class="data-card">
+            <div class="data-card-icon">👤</div>
+            <div class="data-card-title">Personal Identifiers</div>
+            <div class="data-card-desc">Name, email address, phone number, and billing information provided when engaging our services.</div>
+          </div>
+          <div class="data-card">
+            <div class="data-card-icon">💼</div>
+            <div class="data-card-title">Business Information</div>
+            <div class="data-card-desc">Company name, industry, brand preferences, and creative briefs you share with our team.</div>
+          </div>
+          <div class="data-card">
+            <div class="data-card-icon">💳</div>
+            <div class="data-card-title">Payment Details</div>
+            <div class="data-card-desc">Transaction data processed securely via third-party processors. We do not store card details.</div>
+          </div>
+          <div class="data-card">
+            <div class="data-card-icon">🌐</div>
+            <div class="data-card-title">Usage Data</div>
+            <div class="data-card-desc">IP address, browser type, pages visited, and time spent on our site via cookies and analytics.</div>
+          </div>
+        </div>
+        <p>We collect this information when you fill out a contact or order form, correspond with us by email, make a payment, or browse our portfolio website.</p>
+      </section>
+
+      <!-- 03 HOW WE USE IT -->
+      <section class="section" id="use">
+        <div class="section-header">
+          <span class="section-num">03</span>
+          <h2 class="section-title">How We Use Your Information</h2>
+        </div>
+        <p>Your information is used exclusively to serve you better and operate our business effectively. We use your data to:</p>
+        <ul class="policy-list">
+          <li>Deliver and manage your logo design and branding projects from brief to final delivery.</li>
+          <li>Communicate with you throughout the design process, including revisions and approvals.</li>
+          <li>Process payments and issue invoices for services rendered.</li>
+          <li>Respond to your enquiries, feedback, and support requests promptly.</li>
+          <li>Send you important service-related notifications and project status updates.</li>
+          <li>Improve our website, portfolio, and overall service quality based on aggregated usage patterns.</li>
+          <li>Send occasional marketing emails about our services — only with your explicit consent, and you may opt out at any time.</li>
+          <li>Comply with applicable legal obligations and protect our legal rights.</li>
+        </ul>
+        <p>We process your data on the legal bases of contractual necessity, legitimate business interest, and — where required by law — your explicit consent.</p>
+      </section>
+
+      <!-- 04 SHARING INFORMATION -->
+      <section class="section" id="share">
+        <div class="section-header">
+          <span class="section-num">04</span>
+          <h2 class="section-title">Sharing of Information</h2>
+        </div>
+        <p>We do not sell, trade, or rent your personal information to any third party. We value your privacy and only share your data in the following limited circumstances:</p>
+        <ul class="policy-list">
+          <li><strong>Service Providers:</strong> Trusted partners who assist in delivering our services — such as payment processors, email platforms, and cloud storage providers — are bound by strict confidentiality agreements and may only use your data for the purposes we specify.</li>
+          <li><strong>Legal Compliance:</strong> When required by law, court order, or a legitimate government request, we may disclose information to comply with our legal obligations.</li>
+          <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your data may be transferred as part of that transaction. We will provide notice before your data is transferred and becomes subject to a different privacy policy.</li>
+          <li><strong>With Your Consent:</strong> We may share your project information — such as for our portfolio or case studies — only upon receiving your prior written consent.</li>
+        </ul>
+        <div class="highlight-box">
+          <p>We never display your completed logo or brand assets in our portfolio without first receiving explicit written permission from you.</p>
+        </div>
+      </section>
+
+      <!-- 05 DATA RETENTION -->
+      <section class="section" id="retention">
+        <div class="section-header">
+          <span class="section-num">05</span>
+          <h2 class="section-title">Data Retention</h2>
+        </div>
+        <p>We retain your personal information only for as long as necessary to fulfil the purposes outlined in this policy. Specifically:</p>
+        <ul class="policy-list">
+          <li>Project files and correspondence are retained for up to 3 years after project completion to support revision requests or resolve any disputes.</li>
+          <li>Financial records, including invoices and payment data, are kept for 7 years to meet tax and accounting obligations.</li>
+          <li>Marketing-related data is retained until you withdraw consent or unsubscribe from our communications.</li>
+          <li>Website usage data collected via cookies is typically retained for 12 to 24 months.</li>
+        </ul>
+        <p>Upon the expiry of these periods, or upon a valid deletion request from you, we securely delete or anonymise your data in accordance with applicable data protection law.</p>
+      </section>
+
+      <!-- 06 YOUR RIGHTS -->
+      <section class="section" id="rights">
+        <div class="section-header">
+          <span class="section-num">06</span>
+          <h2 class="section-title">Your Rights &amp; Choices</h2>
+        </div>
+        <p>Depending on your jurisdiction, you may have the following rights regarding your personal data:</p>
+        <ul class="policy-list">
+          <li><strong>Access:</strong> Request a copy of the personal information we hold about you.</li>
+          <li><strong>Correction:</strong> Ask us to correct any inaccurate or incomplete information we hold.</li>
+          <li><strong>Deletion:</strong> Request that we delete your personal data, subject to any legal retention obligations.</li>
+          <li><strong>Opt-Out:</strong> Unsubscribe from marketing communications at any time via the unsubscribe link included in every email.</li>
+          <li><strong>Data Portability:</strong> Request a copy of your data in a structured, machine-readable format.</li>
+          <li><strong>Objection:</strong> Object to the processing of your personal data for direct marketing or legitimate interest purposes.</li>
+          <li><strong>Withdraw Consent:</strong> Where we process your data on the basis of consent, you may withdraw that consent at any time without affecting the lawfulness of prior processing.</li>
+        </ul>
+        <p>To exercise any of these rights, please contact us using the details provided in Section 10 below. We will respond to all valid requests within 30 days.</p>
+      </section>
+
+      <!-- 07 SECURITY -->
+      <section class="section" id="security">
+        <div class="section-header">
+          <span class="section-num">07</span>
+          <h2 class="section-title">Security</h2>
+        </div>
+        <p>We take the security of your personal information seriously and implement appropriate technical and organisational measures to protect it against unauthorised access, alteration, disclosure, or destruction.</p>
+        <ul class="policy-list">
+          <li>All data transmissions between your browser and our website are encrypted using industry-standard SSL/TLS protocols.</li>
+          <li>Access to client files and personal data is restricted to authorised personnel only, on a need-to-know basis.</li>
+          <li>We use secure, access-controlled cloud storage services with regular security reviews.</li>
+          <li>Payment information is handled exclusively by PCI-DSS compliant third-party processors and is never stored on our servers.</li>
+        </ul>
+        <p>While we apply every reasonable precaution, no method of transmission over the internet is entirely secure. In the unlikely event of a data breach that may affect your rights or freedoms, we will notify you in accordance with applicable law without undue delay.</p>
+      </section>
+
+      <!-- 08 CHILDREN -->
+      <section class="section" id="children">
+        <div class="section-header">
+          <span class="section-num">08</span>
+          <h2 class="section-title">Children's Privacy</h2>
+        </div>
+        <p>Mirza Logo Designing does not knowingly collect or solicit personal information from individuals under the age of 18. Our services are intended for business owners, entrepreneurs, and adults seeking professional creative services.</p>
+        <p>If you believe we have inadvertently collected personal information from a minor, please contact us immediately at the details below and we will promptly delete such data from our records.</p>
+      </section>
+
+      <!-- 09 POLICY UPDATES -->
+      <section class="section" id="changes">
+        <div class="section-header">
+          <span class="section-num">09</span>
+          <h2 class="section-title">Policy Updates</h2>
+        </div>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices, applicable laws, or the services we offer. When we make material changes, we will update the "Last Updated" date at the top of this page and, where appropriate, notify you directly via email.</p>
+        <p>We encourage you to review this policy periodically to stay informed about how we protect your information. Your continued use of our services after any changes are posted constitutes your acceptance of the updated policy.</p>
+      </section>
+
+      <!-- 10 CONTACT -->
+      <section class="section" id="contact">
+        <div class="section-header">
+          <span class="section-num">10</span>
+          <h2 class="section-title">Contact Us</h2>
+        </div>
+        <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the handling of your personal data, please do not hesitate to get in touch. We are always happy to assist.</p>
+        <div class="contact-card">
+          <div class="contact-title">Get in Touch</div>
+          <div class="contact-row">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <div class="contact-label">Email</div>
+              <div class="contact-value">mirzalogodesigningcompany@gmail.com</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Studio Address</div>
+              <div class="contact-value">Mirza Logo Designing — Creative Studio, Pakistan</div>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-icon">🕐</div>
+            <div>
+              <div class="contact-label">Response Time</div>
+              <div class="contact-value">All enquiries answered within 2 business days.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-text">© 2026 Mirza Logo Designing. All rights reserved.</span>
+      <span class="footer-brand">Crafted with care for our clients.</span>
+    </div>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('#nav .nav-link');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const active = document.querySelector(`#nav .nav-link[href="#${entry.target.id}"]`);
+          if (active) active.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-15% 0px -75% 0px' });
+
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
